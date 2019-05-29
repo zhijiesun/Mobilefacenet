@@ -1,7 +1,7 @@
 from keras.regularizers import l2
 from keras.models import Model
 from keras.layers import *
-from loss import *
+from arcface import *
 import tensorflow as tf
 
 
