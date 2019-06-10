@@ -4,10 +4,6 @@ from loss import *
 import os, shutil
 from keras.preprocessing.image import ImageDataGenerator
 from keras import optimizers
-from load_data import *
-#load data
-import tensorflow as tf
-from keras.callbacks import TensorBoard
 
 base_dir = './data'
 
