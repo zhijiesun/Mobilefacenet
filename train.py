@@ -24,9 +24,9 @@ model_test.compile(loss='categorical_crossentropy',
 epochs=10
 for e in range(epochs):
     print('Epoch', e)
-    for batches in train_image:
-        X_batch, label_batch = batches[:]
+    for i in range(len(train_image)):
+        X_batch, label_batch = train_image[i]
         print(len(X_batch))
-        model_test.fit([X_batch, label_batch],label_batch, epochs=3, batch_size=64)
+        model_test.fit([X_batch, label_batch],label_batch,  batch_size=64)
 
 
