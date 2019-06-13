@@ -27,6 +27,6 @@ for e in range(epochs):
     for i in range(len(train_image)):
         X_batch, label_batch = train_image[i]
         print(len(X_batch))
-        model_test.fit([X_batch, label_batch],label_batch,  batch_size=64)
+        model_test.train_on_batch([X_batch, label_batch],label_batch)
 
 
