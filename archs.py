@@ -74,8 +74,8 @@ def InvertedResidualBlock(x, expand, out_channels, repeats, stride, weight_decay
 
                     kernel_regularizer=l2(weight_decay), name='conv_%d_%d' % (block_id, i))(x)
 
-        x = BatchNormalization()(x)
-        x = PReLU()(x)
+        x1 = BatchNormalization()(x1)
+        x1 = PReLU()(x1)
 
         x1 = DepthwiseConv2D((3, 3),
 
@@ -91,8 +91,8 @@ def InvertedResidualBlock(x, expand, out_channels, repeats, stride, weight_decay
 
                             name='conv_dw_%d_%d' % (block_id, i))(x1)
 
-        x = BatchNormalization()(x)
-        x = PReLU()(x)
+        x1 = BatchNormalization()(x1)
+        x1 = PReLU()(x1)
 
         x1 = Conv2D(out_channels, 1, padding='same', strides=1, use_bias=False,
 
